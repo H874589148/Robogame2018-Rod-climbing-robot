@@ -1,0 +1,47 @@
+
+#include "stm32f10x.h"
+#include "math.h"
+#include "stdio.h"
+#include "delay.h"
+#include "StepperMotor.h"
+#include "SteeringEngine.h"
+#include "Distance.h"
+
+void RCC_Configuration(void);	 //时钟初始化，开启外设时钟
+void GPIO_Configuration(void);	 //IO口初始化，配置其功能
+void delay_nus(u32);           //72M时钟下，约延时us
+void delay_nms(u32);            //72M时钟下，约延时ms
+float s,aa;
+void assert_failed(uint8_t* file, uint32_t line)
+{
+ printf("Wrong parameters value: file %s on line %d\r\n", file, line);
+ while(1);
+}
+
+
+int main(void)
+{
+
+	//stepper_Init(16,5 
+	  s= Getdistance();
+	  aa=1;
+	
+		/*TIM_PWM_Init();
+		while(1){
+			setAngle(1 ,0);
+			delay_nms(2000);
+			setAngle(1 ,180);
+			delay_nms(2000);}	*/			//setAngle(2,0);
+	
+		
+		
+		}//		stepper_Init(16,3);   //控制步进电机转速
+//		delay_nms(3000);
+//		stepper_Init(16,5);
+//		delay_nms(3000);
+//		stepper_Init(16,6);
+//		delay_nms(3000);
+//		stepper_Init(16,5);
+//		delay_nms(3000);
+//		stepper_Init(16,3);
+//		delay_nms(3000);
